@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Firly | Informatics Engineer & Tech Innovator</title>
+  <meta name="description" content="Personal Portfolio Muhammad Firly — Fresh Graduate S1 Teknik Informatika Universitas Bani Saleh (2026). Fokus pada Web Development, Physical Networking, IoT, Data, dan Cyber Security." />
+  <meta name="keywords" content="Muhammad Firly, Fresh Graduate, Teknik Informatika, Web Developer, Network Engineer, IoT, Cyber Security, Universitas Bani Saleh, CV ATS" />
+  <meta name="author" content="Muhammad Firly" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Muhammad Firly | Personal Portfolio" />
+  <meta property="og:description" content="Informatics Engineer fresh graduate yang fokus di junior web development, physical networking, IoT & cyber security." />
+  <meta property="og:image" content="gambar/fotoprofil/fotoprofil.png" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Glow Effects -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- Header / Navigation Bar (Norden Style Floating Pill) -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="brand-logo" aria-label="Muhammad Firly Home">
+        <span class="logo-symbol">●</span>
+        <span class="logo-text">Firly<span class="logo-sub">.dev</span></span>
+      </a>
+
+      <!-- Status Indicator Pill -->
+      <div class="status-badge" title="Status Ketersediaan">
+        <span class="pulse-dot"></span>
+        <span class="status-text">Available for Hire</span>
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">Tentang</a></li>
+        <li><a href="#projects" class="nav-link">Project & IoT</a></li>
+        <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+        <li><a href="#certifications" class="nav-link">Sertifikasi</a></li>
+        <li><a href="#album" class="nav-link">Album</a></li>
+        <li><a href="#contact" class="nav-link nav-link-highlight">Hubungi</a></li>
+      </ul>
+
+      <!-- Action Controls -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Switch -->
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark / Light Mode" title="Ganti Tema">
+          <span class="toggle-icon sun"><i class="fa-solid fa-sun"></i></span>
+          <span class="toggle-icon moon"><i class="fa-solid fa-moon"></i></span>
+          <span class="toggle-slider"></span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Buka Menu Navigasi">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-grid">
+        
+        <!-- Main Intro Card -->
+        <div class="card hero-main-card">
+          <!-- Profile Badge Row -->
+          <div class="profile-badge-row">
+            <div class="avatar-wrapper">
+              <img src="gambar/fotoprofil/fotoprofil.png" alt="Foto Profil Muhammad Firly" class="avatar-img" />
+              <div class="avatar-online-status" title="Aktif"></div>
+            </div>
+            <div class="profile-meta">
+              <h1 class="profile-name">Muhammad Firly</h1>
+              <p class="profile-role">
+                <span class="role-highlight">Informatics Engineer</span> • S1 Fresh Graduate (2026)
+              </p>
+            </div>
+          </div>
+
+          <!-- Main Value Proposition Headline -->
+          <div class="hero-headline-group">
+            <h2 class="hero-title">
+              Membangun Solusi Digital & Infrastruktur Jaringan yang Handal.
+            </h2>
+            <p class="hero-description">
+              Informatics Engineer fresh graduate dari <strong>Universitas Bani Saleh</strong> dengan fokus mendalam pada <strong>Junior Web Development</strong>, <strong>Physical Networking</strong>, <strong>IoT Systems</strong>, serta eksplorasi <strong>Cyber Security & Data</strong>.
+            </p>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-brands fa-whatsapp"></i> Hubungi Saya
+            </a>
+            <button class="btn btn-secondary" id="openCvModalBtn">
+              <i class="fa-regular fa-file-pdf"></i> Preview CV ATS
+            </button>
+            <a href="cv/CV_Muhammad_Firly_ATS.pdf" download="CV_Muhammad_Firly_ATS.pdf" class="btn btn-outline" title="Download Format PDF ATS">
+              <i class="fa-solid fa-arrow-down-to-line"></i> Download ATS
+            </a>
+          </div>
+
+          <!-- Core Competencies Chips -->
+          <div class="competency-chips">
+            <span class="chip"><i class="fa-solid fa-code"></i> Web Development</span>
+            <span class="chip"><i class="fa-solid fa-network-wired"></i> Physical Networking</span>
+            <span class="chip"><i class="fa-solid fa-microchip"></i> IoT & Hardware</span>
+            <span class="chip"><i class="fa-solid fa-shield-halved"></i> Cyber Security</span>
+            <span class="chip"><i class="fa-solid fa-database"></i> Data & SQL</span>
+          </div>
+        </div>
+
+        <!-- Hero Side Widget: Quick Highlight & Media Card -->
+        <div class="hero-side-column">
+          
+          <!-- Radar Bekasi Media Highlight Card -->
+          <a href="https://radarbekasi.id/2026/08/04/manfaatkan-perkembangan-teknologi-digital-ubs-dorong-mahasiswa-berinovasi/" target="_blank" rel="noopener noreferrer" class="card highlight-card media-badge-card">
+            <div class="highlight-badge-header">
+              <span class="badge-tag media-tag"><i class="fa-regular fa-newspaper"></i> Media Exposure</span>
+              <span class="external-link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+            <div class="media-content-preview">
+              <div class="media-logo-title">
+                <span class="media-brand">Radar Bekasi</span>
+                <span class="media-date">4 Agustus 2026</span>
+              </div>
+              <h3 class="highlight-title">"Manfaatkan Perkembangan Teknologi Digital, UBS Dorong Mahasiswa Berinovasi"</h3>
+              <p class="highlight-desc">Inovasi alat IoT pemantauan lalu lintas hasil rancang bangun Muhammad Firly diliput media resmi.</p>
+            </div>
+          </a>
+
+          <!-- Quick Metrics & Education Card -->
+          <div class="card highlight-card education-mini-card">
+            <div class="edu-mini-header">
+              <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div>
+                <span class="edu-sub">Pendidikan Terakhir</span>
+                <h4 class="edu-title">S1 Teknik Informatika</h4>
+              </div>
+            </div>
+            <p class="edu-campus"><i class="fa-solid fa-building-columns"></i> Universitas Bani Saleh (Lulus 2026)</p>
+            <div class="edu-status-pill">
+              <i class="fa-solid fa-check-circle"></i> Siap Kerja Full-Time / Onsite & Remote
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT & STORY SECTION ==================== -->
+    <section id="about" class="section about-section">
+      <div class="section-header">
+        <span class="section-subtitle">Latar Belakang & Filosofi</span>
+        <h2 class="section-title">Kenapa Teknologi? Cerita di Balik Passion</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Personal Story Narrative Card -->
+        <div class="card story-card">
+          <div class="story-content">
+            <p class="story-lead">
+              Bagi saya, teknik informatika bukan sekadar baris kode di layar monitor — melainkan jembatan nyata yang menghubungkan logika digital dengan kebutuhan manusia dan perangkat fisik di dunia nyata.
+            </p>
+
+            <div class="story-blocks">
+              <div class="story-item">
+                <div class="story-icon-box dev-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="story-text">
+                  <h4 class="story-item-title">Mengapa Suka Web Development?</h4>
+                  <p>
+                    Web adalah media tercepat untuk menyampaikan ide ke seluruh dunia. Saya menyukai kepuasan saat merancang antarmuka yang intuitif, responsif, dan menghubungkannya dengan logika backend serta API yang kokoh untuk memecahkan masalah pengguna.
+                  </p>
+                </div>
+              </div>
+
+              <div class="story-item">
+                <div class="story-icon-box net-icon">
+                  <i class="fa-solid fa-diagram-project"></i>
+                </div>
+                <div class="story-text">
+                  <h4 class="story-item-title">Mengapa Tertarik Physical Networking & IoT?</h4>
+                  <p>
+                    Ada kepuasan tersendiri saat melihat kabel LAN terhubung rapi, konfigurasi routing bekerja mulus, hingga mikrokontroler sensor IoT membaca kecepatan kendaraan di jalan raya dan mengirimkan datanya secara real-time melalui jaringan nirkabel.
+                  </p>
+                </div>
+              </div>
+
+              <div class="story-item">
+                <div class="story-icon-box sec-icon">
+                  <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div class="story-text">
+                  <h4 class="story-item-title">Mengapa Menekuni Cyber Security & Data?</h4>
+                  <p>
+                    Sistem yang canggih tidak ada gunanya jika rentan dibobol. Ketertarikan saya pada keamanan aplikasi menginspirasi saya membuat tool keamanan seperti <strong>SecretLee</strong> (terinspirasi dari konsep Burp Suite). Sementara dengan data & SQL, kita bisa mengambil keputusan berbasis bukti, bukan tebakan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic & Technical Skillset Card -->
+        <div class="card academic-skill-card">
+          <h3 class="card-inner-title"><i class="fa-solid fa-id-card-clip"></i> Ringkasan Profil Akademik</h3>
+          <ul class="academic-list">
+            <li>
+              <span class="spec-label">Program Studi</span>
+              <span class="spec-value">S1 Teknik Informatika (Strata 1)</span>
+            </li>
+            <li>
+              <span class="spec-label">Perguruan Tinggi</span>
+              <span class="spec-value">Universitas Bani Saleh, Bekasi</span>
+            </li>
+            <li>
+              <span class="spec-label">Tahun Kelulusan</span>
+              <span class="spec-value">Tahun 2026 (Fresh Graduate)</span>
+            </li>
+            <li>
+              <span class="spec-label">Peminatan Utama</span>
+              <span class="spec-value">Web Dev, Network Engineering, IoT, CyberSec</span>
+            </li>
+          </ul>
+
+          <div class="skills-breakdown">
+            <h4 class="skills-heading">Teknologi & Keahlian Praktis</h4>
+            <div class="skill-tags-group">
+              <span class="tech-tag">HTML5 / Modern CSS / JavaScript</span>
+              <span class="tech-tag">PHP / MySQL / SQL</span>
+              <span class="tech-tag">Python & Data Science Basics</span>
+              <span class="tech-tag">Computer Networking & Subnetting</span>
+              <span class="tech-tag">Cisco Packet Tracer & IT Essentials</span>
+              <span class="tech-tag">Network Monitoring (Zabbix)</span>
+              <span class="tech-tag">CCTV Infrastructure & Maintenance</span>
+              <span class="tech-tag">IoT Hardware, Sensor & Telemetri</span>
+              <span class="tech-tag">Penetration Testing Tools (Burp Suite Concept)</span>
+            </div>
+          </div>
+
+          <!-- CV ATS Action Box -->
+          <div class="cv-action-box">
+            <div class="cv-info">
+              <span class="cv-badge">Curriculum Vitae</span>
+              <h5 class="cv-name">CV ATS Muhammad Firly (2026)</h5>
+              <p class="cv-note">Format standar ATS, terstruktur, siap diverifikasi HR Tech.</p>
+            </div>
+            <div class="cv-buttons">
+              <button class="btn btn-sm btn-primary" onclick="openPdfModal()">
+                <i class="fa-regular fa-eye"></i> Buka Viewer PDF
+              </button>
+              <a href="cv/CV_Muhammad_Firly_ATS.pdf" download="CV_Muhammad_Firly_ATS.pdf" class="btn btn-sm btn-outline">
+                <i class="fa-solid fa-download"></i> Unduh File
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS & INNOVATIONS ==================== -->
+    <section id="projects" class="section projects-section">
+      <div class="section-header">
+        <span class="section-subtitle">Karya Nyata & Riset</span>
+        <h2 class="section-title">Featured Projects & Inovasi IoT</h2>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: SecretLee (Security Tool) -->
+        <div class="card project-card">
+          <div class="project-header">
+            <div class="project-type-tag sec-tag">
+              <i class="fa-solid fa-bug-slash"></i> Cyber Security & Web Audit
+            </div>
+            <a href="https://github.com/frlmhmmd/secretlee" target="_blank" rel="noopener noreferrer" class="project-github-link" title="Kunjungi Repository GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3 class="project-title">SecretLee — Web Security & Testing Tool</h3>
+              <span class="status-chip open-source">Open Source Repo</span>
+            </div>
+
+            <p class="project-desc">
+              Perangkat lunak auditing keamanan web yang saya kembangkan untuk mendeteksi celah keamanan, parameter tersembunyi, dan endpoints rentan pada aplikasi web (terinspirasi dari fungsionalitas pengujian penetrasi seperti Burp Suite).
+            </p>
+
+            <div class="project-feature-list">
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i> Intercepting & analisa request HTTP/HTTPS
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i> Otomatisasi scanning kerentanan web target
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i> Modular scanner & custom payload injection
+              </div>
+            </div>
+
+            <div class="project-stack">
+              <span class="stack-badge">Security Testing</span>
+              <span class="stack-badge">Python / Scripting</span>
+              <span class="stack-badge">HTTP Protocols</span>
+              <span class="stack-badge">Vulnerability Scan</span>
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <a href="https://github.com/frlmhmmd/secretlee" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary w-100">
+              <i class="fa-brands fa-github"></i> Eksplorasi Kode di GitHub <i class="fa-solid fa-arrow-right icon-after"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: IoT Vehicle Monitoring System (Diliput Radar Bekasi) -->
+        <div class="card project-card featured-iot-card">
+          <div class="project-header">
+            <div class="project-type-tag iot-tag">
+              <i class="fa-solid fa-microchip"></i> IoT & Hardware System • Media Featured
+            </div>
+            <a href="https://radarbekasi.id/2026/08/04/manfaatkan-perkembangan-teknologi-digital-ubs-dorong-mahasiswa-berinovasi/" target="_blank" rel="noopener noreferrer" class="project-news-link" title="Buka Artikel Radar Bekasi">
+              <i class="fa-regular fa-newspaper"></i>
+            </a>
+          </div>
+
+          <!-- IoT Photo with Lightbox Trigger -->
+          <div class="project-media-container" onclick="openImageModal('gambar/fotoujicobaalatIOT/fotoujicobaalatIOT.png', 'Dokumentasi Uji Coba Lapangan: Rancang Bangun Sistem Monitoring Kecepatan dan Volume Kendaraan Berbasis IoT')">
+            <img src="gambar/fotoujicobaalatIOT/fotoujicobaalatIOT.png" alt="Uji Coba Alat IoT Monitoring Kendaraan" class="project-media-img" loading="lazy" />
+            <div class="media-overlay">
+              <span class="overlay-text"><i class="fa-solid fa-magnifying-glass-plus"></i> Klik untuk Perbesar Dokumentasi</span>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3 class="project-title">Rancang Bangun Sistem Monitoring Kecepatan & Volume Kendaraan Berbasis IoT</h3>
+            </div>
+
+            <p class="project-desc">
+              Sistem perangkat keras terintegrasi sensor cerdas dan mikrokontroler untuk mengukur laju kecepatan serta menghitung volume kepadatan kendaraan secara otomatis dan real-time. Inovasi ini berhasil mendapat sorotan media cetak & online <strong>Radar Bekasi</strong>.
+            </p>
+
+            <div class="project-feature-list">
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i> Deteksi laju kecepatan presisi dengan sensor optik/ultrasonik
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i> Pengiriman data telemetri otomatis ke dashboard cloud
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i> Pengujian lapangan langsung di jalan raya dengan hasil akurat
+              </div>
+            </div>
+
+            <div class="project-stack">
+              <span class="stack-badge">IoT Architecture</span>
+              <span class="stack-badge">Microcontroller</span>
+              <span class="stack-badge">Sensor Telemetry</span>
+              <span class="stack-badge">Cloud Dashboard</span>
+              <span class="stack-badge">Hardware Prototyping</span>
+            </div>
+          </div>
+
+          <div class="project-footer dual-action">
+            <a href="https://radarbekasi.id/2026/08/04/manfaatkan-perkembangan-teknologi-digital-ubs-dorong-mahasiswa-berinovasi/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+              <i class="fa-regular fa-newspaper"></i> Baca di Radar Bekasi
+            </a>
+            <button class="btn btn-sm btn-outline" onclick="openImageModal('gambar/fotoujicobaalatIOT/fotoujicobaalatIOT.png', 'Dokumentasi Uji Coba Lapangan: Sistem Monitoring Kecepatan dan Volume Kendaraan Berbasis IoT')">
+              <i class="fa-solid fa-image"></i> Lihat Foto Uji Coba
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE & INTERNSHIP ==================== -->
+    <section id="experience" class="section experience-section">
+      <div class="section-header">
+        <span class="section-subtitle">Jejak Langkah Profesional</span>
+        <h2 class="section-title">Pengalaman Kerja & Magang Industri</h2>
+      </div>
+
+      <div class="experience-timeline">
+        
+        <!-- Experience 1: PT Oscarmas -->
+        <div class="card experience-card">
+          <div class="exp-header">
+            <div class="exp-title-block">
+              <div class="exp-company-logo">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <div>
+                <h3 class="exp-role">IT Department & Network Infrastructure Intern</h3>
+                <h4 class="exp-company">PT Oscarmas</h4>
+              </div>
+            </div>
+            <span class="exp-period-badge"><i class="fa-regular fa-calendar-check"></i> Industrial Internship</span>
+          </div>
+
+          <div class="exp-body">
+            <p class="exp-summary">
+              Bertanggung jawab di lingkungan departemen teknologi informasi untuk memastikan kelancaran konektivitas jaringan komputer, pemeliharaan infrastruktur CCTV pengawas area industri, dan monitoring traffic jaringan operasional perusahaan alat berat.
+            </p>
+
+            <div class="exp-duties">
+              <h5 class="exp-subhead">Tanggung Jawab & Kontribusi Kunci:</h5>
+              <div class="duty-grid">
+                <div class="duty-card">
+                  <i class="fa-solid fa-chart-line duty-icon"></i>
+                  <div>
+                    <strong>Monitoring Lalu Lintas Jaringan:</strong>
+                    <p>Menganalisis penggunaan bandwidth, kestabilan routing, dan mendeteksi anomali pada konektivitas kantor & gudang.</p>
+                  </div>
+                </div>
+                <div class="duty-card">
+                  <i class="fa-solid fa-video duty-icon"></i>
+                  <div>
+                    <strong>Maintenance CCTV & Hardware:</strong>
+                    <p>Melakukan instalasi, konfigurasi IP camera, troubleshooting koneksi DVR/NVR, serta pemeliharaan kabel fiber/UTP.</p>
+                  </div>
+                </div>
+                <div class="duty-card">
+                  <i class="fa-solid fa-headset duty-icon"></i>
+                  <div>
+                    <strong>IT Support & Hardware Troubleshooting:</strong>
+                    <p>Menangani kendala teknis perangkat kerja staf, instalasi OS, konfigurasi printer jaringan, dan dukungan sistem.</p>
+                  </div>
+                </div>
+                <div class="duty-card">
+                  <i class="fa-solid fa-truck-ramp-box duty-icon"></i>
+                  <div>
+                    <strong>Dukungan Area Lapangan Alat Berat:</strong>
+                    <p>Mengobservasi integrasi teknologi dan jaringan komunikasi di area operasional alat berat perusahaan.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Media Gallery (Photos and Videos from Oscarmas) -->
+            <div class="exp-media-section">
+              <h5 class="exp-subhead"><i class="fa-solid fa-photo-film"></i> Dokumentasi Foto & Video Magang PT Oscarmas</h5>
+              <div class="exp-media-grid">
+                
+                <!-- Photo 1: IT Department -->
+                <div class="media-thumb-card" onclick="openImageModal('gambar/fotodanvideointernshiposcarmas/foto1_departmentIT.png', 'Dokumentasi Magang PT Oscarmas: Ruang Kerja & Suasana IT Department')">
+                  <img src="gambar/fotodanvideointernshiposcarmas/foto1_departmentIT.png" alt="Suasana Department IT PT Oscarmas" loading="lazy" />
+                  <div class="thumb-badge"><i class="fa-solid fa-camera"></i> IT Department</div>
+                </div>
+
+                <!-- Photo 2: Network Traffic -->
+                <div class="media-thumb-card" onclick="openImageModal('gambar/fotodanvideointernshiposcarmas/foto2_lalulintasjaringan.png', 'Dokumentasi Magang PT Oscarmas: Monitoring Lalu Lintas & Infrastruktur Jaringan')">
+                  <img src="gambar/fotodanvideointernshiposcarmas/foto2_lalulintasjaringan.png" alt="Monitoring Jaringan PT Oscarmas" loading="lazy" />
+                  <div class="thumb-badge"><i class="fa-solid fa-chart-simple"></i> Traffic Jaringan</div>
+                </div>
+
+                <!-- Video 1: Heavy Equipment in Motion -->
+                <div class="media-video-card">
+                  <div class="video-container">
+                    <video controls preload="metadata" poster="gambar/fotodanvideointernshiposcarmas/foto1_departmentIT.png">
+                      <source src="gambar/fotodanvideointernshiposcarmas/video1_alatberatsedangdipindahkan.mp4" type="video/mp4" />
+                      Browser Anda tidak mendukung tag video.
+                    </video>
+                  </div>
+                  <div class="video-caption">
+                    <i class="fa-solid fa-video"></i> Lapangan: Pemindahan Alat Berat
+                  </div>
+                </div>
+
+                <!-- Video 2: Maintenance Network & CCTV -->
+                <div class="media-video-card">
+                  <div class="video-container">
+                    <video controls preload="metadata" poster="gambar/fotodanvideointernshiposcarmas/foto2_lalulintasjaringan.png">
+                      <source src="gambar/fotodanvideointernshiposcarmas/video2_monitoringdanmaintenancejaringansertacctv.mp4" type="video/mp4" />
+                      Browser Anda tidak mendukung tag video.
+                    </video>
+                  </div>
+                  <div class="video-caption">
+                    <i class="fa-solid fa-video"></i> Maintenance Jaringan & CCTV
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Additional Industrial Training & Practices -->
+        <div class="other-exp-grid">
+          <div class="card mini-exp-card">
+            <div class="mini-exp-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+            <div class="mini-exp-content">
+              <span class="mini-exp-date">Praktik Kerja Industri</span>
+              <h4 class="mini-exp-title">PDAM Tirta Patriot</h4>
+              <p class="mini-exp-desc">Praktek kerja industri lapangan di instansi penyedia air bersih daerah kota Bekasi, mendukung operasional dan sistem infrastruktur teknis.</p>
+            </div>
+          </div>
+
+          <div class="card mini-exp-card">
+            <div class="mini-exp-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="mini-exp-content">
+              <span class="mini-exp-date">Pelatihan Kerja Profesional</span>
+              <h4 class="mini-exp-title">PT Fuji Bijak Training Center</h4>
+              <p class="mini-exp-desc">Mengikuti program sertifikasi dan pelatihan kerja berstandar profesional untuk kesiapan memasuki dunia industri modern.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS & GLOBAL AI TRAINING ==================== -->
+    <section id="certifications" class="section certifications-section">
+      <div class="section-header">
+        <span class="section-subtitle">Validasi Kompetensi & Pelatihan</span>
+        <h2 class="section-title">Sertifikasi & Pelatihan AI Internasional</h2>
+      </div>
+
+      <!-- Spotlight: International AI Collaboration with South Korean Students -->
+      <div class="card spotlight-ai-card">
+        <div class="ai-card-badge">
+          <span class="pulse-dot ai-dot"></span>
+          <span>International Collaboration • Artificial Intelligence</span>
+        </div>
+
+        <div class="ai-grid">
+          <div class="ai-media-column" onclick="openImageModal('gambar/foto untuk penjelasan ketika aku mengikuti pelatihan artificial intelligence bersama mahasiswa korea selatan/foto untuk penjelasan ketika aku mengikuti pelatihan artificial intelligence bersama mahasiswa korea selatan.png', 'Dokumentasi Pelatihan Kecerdasan Buatan (Artificial Intelligence) bersama Mahasiswa/Mahasiswi dari Korea Selatan')">
+            <div class="ai-image-wrap">
+              <img src="gambar/foto untuk penjelasan ketika aku mengikuti pelatihan artificial intelligence bersama mahasiswa korea selatan/foto untuk penjelasan ketika aku mengikuti pelatihan artificial intelligence bersama mahasiswa korea selatan.png" alt="Pelatihan AI bersama Mahasiswa Korea Selatan" loading="lazy" />
+              <div class="media-overlay">
+                <span class="overlay-text"><i class="fa-solid fa-magnifying-glass-plus"></i> Lihat Foto Resolusi Penuh</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-content-column">
+            <h3 class="ai-title">Pelatihan Kecerdasan Buatan (AI) Bersama Mahasiswi/Mahasiswa Korea Selatan</h3>
+            <p class="ai-desc">
+              Pengalaman berharga dalam program pelatihan intensif kecerdasan buatan (Artificial Intelligence) dan pertukaran pengetahuan teknologi secara lintas negara bersama delegasi mahasiswa dari Korea Selatan.
+            </p>
+            
+            <div class="ai-takeaways">
+              <div class="ai-takeaway-item">
+                <i class="fa-solid fa-brain"></i>
+                <div>
+                  <strong>Fondasi & Algoritma AI:</strong>
+                  <span>Mendalami konsep machine learning, neural networks, dan implementasi computer vision dasar.</span>
+                </div>
+              </div>
+              <div class="ai-takeaway-item">
+                <i class="fa-solid fa-globe"></i>
+                <div>
+                  <strong>Kolaborasi Global & Komunikasi:</strong>
+                  <span>Bekerja sama dalam tim internasional, bertukar wawasan seputar tren teknologi terkini di Asia Timur.</span>
+                </div>
+              </div>
+              <div class="ai-takeaway-item">
+                <i class="fa-solid fa-code-merge"></i>
+                <div>
+                  <strong>Studi Kasus Solutif:</strong>
+                  <span>Menerapkan algoritma cerdas untuk pemecahan masalah otomasi data dan sistem komputasi.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Gallery Filter & Grid -->
+      <div class="certifications-container">
+        <div class="cert-filter-bar">
+          <span class="filter-label"><i class="fa-solid fa-filter"></i> Kategori:</span>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Semua (11)</button>
+            <button class="filter-btn" data-filter="networking">Networking & IT</button>
+            <button class="filter-btn" data-filter="data">Data & AI</button>
+            <button class="filter-btn" data-filter="industry">Industri & Pelatihan</button>
+          </div>
+        </div>
+
+        <div class="cert-grid" id="certGrid">
+          
+          <!-- Cert 1: Zabbix Network Monitoring -->
+          <div class="card cert-card" data-category="networking" onclick="openImageModal('gambar/sertifikasi/Sertifikat Monitoring Lalu Lintas Jaringan Cerdas Dengan Zabbix.jpeg', 'Sertifikat Monitoring Lalu Lintas Jaringan Cerdas Dengan Zabbix')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/Sertifikat Monitoring Lalu Lintas Jaringan Cerdas Dengan Zabbix.jpeg" alt="Sertifikat Zabbix Network Monitoring" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Network Monitoring</span>
+              <h4 class="cert-title">Monitoring Lalu Lintas Jaringan Cerdas Dengan Zabbix</h4>
+              <p class="cert-desc">Keahlian monitoring proaktif infrastruktur server & jaringan komputer.</p>
+            </div>
+          </div>
+
+          <!-- Cert 2: Cisco IT Essentials -->
+          <div class="card cert-card" data-category="networking" onclick="openImageModal('gambar/sertifikasi/sertifikatITESSENTIALS.png', 'Sertifikat Cisco IT Essentials: PC Hardware and Software')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/sertifikatITESSENTIALS.png" alt="Sertifikat IT Essentials" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Cisco Networking & Hardware</span>
+              <h4 class="cert-title">IT Essentials: PC Hardware & Software</h4>
+              <p class="cert-desc">Standarisasi fundamental hardware, troubleshooting sistem & arsitektur komputer.</p>
+            </div>
+          </div>
+
+          <!-- Cert 3: Belajar Dasar SQL -->
+          <div class="card cert-card" data-category="data" onclick="openImageModal('gambar/sertifikasi/belajardasarSQL.png', 'Sertifikat Belajar Dasar Structured Query Language (SQL)')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/belajardasarSQL.png" alt="Sertifikat Belajar Dasar SQL" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Database Management</span>
+              <h4 class="cert-title">Belajar Dasar Structured Query Language (SQL)</h4>
+              <p class="cert-desc">Querying relasional, join tables, optimasi data retrieval dan manipulasi database.</p>
+            </div>
+          </div>
+
+          <!-- Cert 4: Belajar Dasar AI -->
+          <div class="card cert-card" data-category="data" onclick="openImageModal('gambar/sertifikasi/belajardasarai.png', 'Sertifikat Belajar Dasar Artificial Intelligence')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/belajardasarai.png" alt="Sertifikat Belajar Dasar AI" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Artificial Intelligence</span>
+              <h4 class="cert-title">Belajar Dasar Artificial Intelligence</h4>
+              <p class="cert-desc">Pemahaman algoritma cerdas, computer vision, NLP, dan implementasi machine learning.</p>
+            </div>
+          </div>
+
+          <!-- Cert 5: Belajar Dasar Pemrograman Python -->
+          <div class="card cert-card" data-category="data" onclick="openImageModal('gambar/sertifikasi/belajardasarbahasapemrogramanpython.png', 'Sertifikat Belajar Dasar Bahasa Pemrograman Python')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/belajardasarbahasapemrogramanpython.png" alt="Sertifikat Dasar Python" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Programming Language</span>
+              <h4 class="cert-title">Dasar Bahasa Pemrograman Python</h4>
+              <p class="cert-desc">Sintaksis Python, struktur data, otomasi skrip, dan pengolahan logika data.</p>
+            </div>
+          </div>
+
+          <!-- Cert 6: Belajar Dasar Data Science -->
+          <div class="card cert-card" data-category="data" onclick="openImageModal('gambar/sertifikasi/belajardasardatascience.png', 'Sertifikat Belajar Dasar Data Science')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/belajardasardatascience.png" alt="Sertifikat Dasar Data Science" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Data Science</span>
+              <h4 class="cert-title">Belajar Dasar Data Science</h4>
+              <p class="cert-desc">Metodologi pengolahan data, eksplorasi statistik, dan pemodelan prediktif.</p>
+            </div>
+          </div>
+
+          <!-- Cert 7: Belajar Dasar Visualisasi Data -->
+          <div class="card cert-card" data-category="data" onclick="openImageModal('gambar/sertifikasi/belajardasarvisualisasidata.png', 'Sertifikat Belajar Dasar Visualisasi Data')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/belajardasarvisualisasidata.png" alt="Sertifikat Visualisasi Data" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Data Analytics</span>
+              <h4 class="cert-title">Belajar Dasar Visualisasi Data</h4>
+              <p class="cert-desc">Mendesain grafik dan visualisasi informatif untuk penyajian insight bisnis.</p>
+            </div>
+          </div>
+
+          <!-- Cert 8: Fuji Bijak Training Center -->
+          <div class="card cert-card" data-category="industry" onclick="openImageModal('gambar/sertifikasi/sertifikasipelatihankerja_difujibijaktrainingcenter.png', 'Sertifikasi Pelatihan Kerja di PT Fuji Bijak Training Center')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/sertifikasipelatihankerja_difujibijaktrainingcenter.png" alt="Sertifikasi PT Fuji Bijak Training Center" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Pelatihan Kerja</span>
+              <h4 class="cert-title">Sertifikasi Pelatihan Kerja Fuji Bijak</h4>
+              <p class="cert-desc">Standardisasi etos kerja industri dan kesiapan profesionalisme kerja.</p>
+            </div>
+          </div>
+
+          <!-- Cert 9: PDAM Tirta Patriot -->
+          <div class="card cert-card" data-category="industry" onclick="openImageModal('gambar/sertifikasi/sertifikatpraktekkerjaindustri_dipdamtirtapatriot.png', 'Sertifikat Praktek Kerja Industri di PDAM Tirta Patriot')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/sertifikatpraktekkerjaindustri_dipdamtirtapatriot.png" alt="Sertifikat Prakerin PDAM" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Prakerin Industri</span>
+              <h4 class="cert-title">Praktek Kerja Industri PDAM Tirta Patriot</h4>
+              <p class="cert-desc">Penerapan ilmu teknis di instansi utilitas publik daerah.</p>
+            </div>
+          </div>
+
+          <!-- Cert 10: Praktisi Semasa Sekolah -->
+          <div class="card cert-card" data-category="industry" onclick="openImageModal('gambar/sertifikasi/sertifikatpraktisisemasasekolah.png', 'Sertifikat Praktisi Semasa Sekolah')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/sertifikatpraktisisemasasekolah.png" alt="Sertifikat Praktisi Sekolah" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Keterampilan Praktis</span>
+              <h4 class="cert-title">Sertifikat Praktisi Kejuruan</h4>
+              <p class="cert-desc">Kompetensi keahlian praktis rekayasa sistem dan infrastruktur komputer.</p>
+            </div>
+          </div>
+
+          <!-- Cert 11: Workshop Industri 4.0 IT Telkom Purwokerto -->
+          <div class="card cert-card" data-category="industry" onclick="openImageModal('gambar/sertifikasi/sertifikatworkshopindustri4.0_diittelkompurwokerto.png', 'Sertifikat Workshop Industri 4.0 di IT Telkom Purwokerto')">
+            <div class="cert-img-wrap">
+              <img src="gambar/sertifikasi/sertifikatworkshopindustri4.0_diittelkompurwokerto.png" alt="Sertifikat Workshop Industri 4.0" loading="lazy" />
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-category-tag">Workshop Teknologi</span>
+              <h4 class="cert-title">Workshop Industri 4.0 (IT Telkom)</h4>
+              <p class="cert-desc">Wawasan integrasi otomasi, IoT, dan ekosistem industri modern 4.0.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ALBUM & MILESTONES ==================== -->
+    <section id="album" class="section album-section">
+      <div class="section-header">
+        <span class="section-subtitle">Galeri Momen Penting</span>
+        <h2 class="section-title">Milestone & Perayaan Sidang Sarjana</h2>
+      </div>
+
+      <div class="album-grid">
+        <!-- Photo Album 1 -->
+        <div class="card album-card" onclick="openImageModal('gambar/fotoalbum/fotoalbum1.png', 'Momen Kelulusan & Sidang Skripsi Sarjana Teknik Informatika Universitas Bani Saleh')">
+          <div class="album-media-wrap">
+            <img src="gambar/fotoalbum/fotoalbum1.png" alt="Perayaan Sidang Skripsi Muhammad Firly" loading="lazy" />
+            <div class="album-overlay">
+              <span class="album-badge"><i class="fa-solid fa-graduation-cap"></i> Sarjana Teknik Informatika (S.Kom)</span>
+              <span class="overlay-zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </div>
+          </div>
+          <div class="album-caption">
+            <h4 class="album-photo-title">Perayaan Kelulusan & Sidang Skripsi (2026)</h4>
+            <p class="album-photo-desc">Momen berharga keberhasilan menyelesaikan tugas akhir dan sidang skripsi di Fakultas Teknik Informatika Universitas Bani Saleh.</p>
+          </div>
+        </div>
+
+        <!-- Photo Album 2 -->
+        <div class="card album-card" onclick="openImageModal('gambar/fotoalbum/fotoalbum2.png', 'Rasa Syukur & Apresiasi Perjalanan Kuliah Teknik Informatika 2026')">
+          <div class="album-media-wrap">
+            <img src="gambar/fotoalbum/fotoalbum2.png" alt="Dokumentasi Perayaan Kelulusan Muhammad Firly" loading="lazy" />
+            <div class="album-overlay">
+              <span class="album-badge"><i class="fa-solid fa-heart"></i> Rasa Syukur & Dedikasi</span>
+              <span class="overlay-zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+            </div>
+          </div>
+          <div class="album-caption">
+            <h4 class="album-photo-title">Dedikasi Perjalanan Akademik</h4>
+            <p class="album-photo-desc">Puncak dari dedikasi 4 tahun belajar rekayasa perangkat lunak, sistem jaringan, dan inovasi teknologi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT & CTA SECTION ==================== -->
+    <section id="contact" class="section contact-section">
+      <div class="card contact-main-card">
+        
+        <div class="contact-header-text">
+          <span class="section-subtitle contact-subtitle">Mari Berkolaborasi</span>
+          <h2 class="contact-title">Tertarik Merekrut atau Berdiskusi? Ayo Terhubung!</h2>
+          <p class="contact-lead">
+            Saya terbuka untuk kesempatan kerja <strong>Full-Time, Contract, maupun Project-Based</strong> sebagai Junior Web Developer, Network Engineer, IT Support, atau posisi teknologi terkait.
+          </p>
+        </div>
+
+        <!-- Contact Channels Grid -->
+        <div class="contact-channels-grid">
+          
+          <!-- Channel 1: WhatsApp -->
+          <a href="https://wa.me/62881011057900?text=Halo%20Firly,%20saya%20tertarik%20dengan%20profil%20dan%20portfolio%20Anda." target="_blank" rel="noopener noreferrer" class="channel-card wa-channel">
+            <div class="channel-icon-box">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="channel-details">
+              <span class="channel-name">WhatsApp Langsung</span>
+              <span class="channel-val">0881011057900</span>
+              <span class="channel-action">Kirim Pesan WhatsApp <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Channel 2: Email -->
+          <div class="channel-card email-channel" onclick="copyText('muhammadfirly68@gmail.com', 'Alamat email berhasil disalin!')">
+            <div class="channel-icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="channel-details">
+              <span class="channel-name">Email Resmi (Klik untuk Salin)</span>
+              <span class="channel-val">muhammadfirly68@gmail.com</span>
+              <span class="channel-action">Salin Email / Kirim Email <i class="fa-solid fa-copy"></i></span>
+            </div>
+          </div>
+
+          <!-- Channel 3: LinkedIn -->
+          <a href="https://www.linkedin.com/in/muhammad-firly-930a38267/" target="_blank" rel="noopener noreferrer" class="channel-card linkedin-channel">
+            <div class="channel-icon-box">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="channel-details">
+              <span class="channel-name">LinkedIn Profile</span>
+              <span class="channel-val">linkedin.com/in/muhammad-firly</span>
+              <span class="channel-action">Koneksi Profesional <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+          </a>
+
+          <!-- Channel 4: GitHub -->
+          <a href="https://github.com/frlmhmmd" target="_blank" rel="noopener noreferrer" class="channel-card github-channel">
+            <div class="channel-icon-box">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="channel-details">
+              <span class="channel-name">GitHub Repository</span>
+              <span class="channel-val">github.com/frlmhmmd</span>
+              <span class="channel-action">Lihat Source Code <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Quick Interactive Message Generator -->
+        <div class="quick-message-box">
+          <h4 class="quick-message-title"><i class="fa-solid fa-paper-plane"></i> Kirim Pesan Cepat via WhatsApp</h4>
+          <div class="quick-message-form">
+            <input type="text" id="recruiterName" class="form-input" placeholder="Nama Anda / Perusahaan (contoh: HR PT Tech)" />
+            <input type="text" id="recruiterRole" class="form-input" placeholder="Posisi yang Ditawarkan (contoh: Web Dev / IT Support)" />
+            <button class="btn btn-primary" onclick="sendCustomWhatsApp()">
+              <i class="fa-brands fa-whatsapp"></i> Buat Pesan WhatsApp Instan
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-symbol">●</span>
+        <span class="footer-name">Muhammad Firly</span>
+        <span class="footer-tagline">— Fresh Graduate S1 Teknik Informatika (2026)</span>
+      </div>
+      <p class="footer-copyright">
+        © 2026 Muhammad Firly. Didesain dengan dedikasi tinggi untuk investasi karier teknologi masa depan.
+      </p>
+      <div class="footer-links">
+        <a href="#hero">Kembali ke Atas <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== LIGHTBOX MODAL (IMAGE PREVIEW) ==================== -->
+  <div id="imageModal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" onclick="closeImageModal()"></div>
+    <div class="modal-content image-modal-content">
+      <button class="modal-close-btn" onclick="closeImageModal()" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-image-container">
+        <img id="modalImg" src="" alt="Pratinjau Gambar" />
+      </div>
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PDF VIEWER MODAL (CV ATS) ==================== -->
+  <div id="pdfModal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" onclick="closePdfModal()"></div>
+    <div class="modal-content pdf-modal-content">
+      <div class="pdf-modal-header">
+        <div class="pdf-title-block">
+          <i class="fa-regular fa-file-pdf pdf-header-icon"></i>
+          <div>
+            <h3 class="pdf-modal-title">CV ATS Muhammad Firly</h3>
+            <span class="pdf-modal-sub">Format Standar ATS • S1 Teknik Informatika (2026)</span>
+          </div>
+        </div>
+        <div class="pdf-header-actions">
+          <a href="cv/CV_Muhammad_Firly_ATS.pdf" download="CV_Muhammad_Firly_ATS.pdf" class="btn btn-sm btn-primary">
+            <i class="fa-solid fa-download"></i> Unduh PDF
+          </a>
+          <button class="modal-close-btn" onclick="closePdfModal()" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+      
+      <div class="pdf-iframe-container">
+        <iframe id="pdfIframe" src="" title="PDF Viewer CV ATS"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification for Copy Alert -->
+  <div id="toast" class="toast" role="alert">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <span id="toastMsg">Teks berhasil disalin ke clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
