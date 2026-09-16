@@ -1,11 +1,14 @@
 /* ==========================================================================
    MUHAMMAD FIRLY - PERSONAL PORTFOLIO JAVASCRIPT
-   Modular vanilla logic for dark mode, lightbox, PDF viewer, filtering & CTA
+   Modular vanilla logic for dark mode, lightbox, PDF viewer, smart navbar,
+   smooth scroll-to-top, filtering & CTA
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initSmartNavbar();
   initMobileMenu();
+  initScrollTop();
   initCertFilters();
   initNavScrollSpy();
   initKeyboardListeners();
@@ -35,27 +38,130 @@ function initTheme() {
   }
 }
 
-/* ---------------- Mobile Menu ---------------- */
+/* ---------------- Smart Auto-Hide Navbar ---------------- */
+function initSmartNavbar() {
+  const navbarWrapper = document.querySelector('.navbar-wrapper');
+  const navMenu = document.getElementById('navMenu');
+  if (!navbarWrapper) return;
+
+  let lastScrollY = window.pageYOffset;
+  let isScrolling;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.pageYOffset;
+
+    // Add subtle shadow when scrolled
+    if (currentScrollY > 20) {
+      navbarWrapper.classList.add('navbar-scrolled');
+    } else {
+      navbarWrapper.classList.remove('navbar-scrolled');
+    }
+
+    // Do not auto-hide if mobile menu is currently open
+    if (navMenu && navMenu.classList.contains('open')) {
+      return;
+    }
+
+    // Scroll Down -> Hide Navbar (if scrolled past 80px)
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      navbarWrapper.classList.add('navbar-hidden');
+    } 
+    // Scroll Up -> Show Navbar
+    else if (currentScrollY < lastScrollY) {
+      navbarWrapper.classList.remove('navbar-hidden');
+    }
+
+    // At the very top -> Always Show
+    if (currentScrollY <= 20) {
+      navbarWrapper.classList.remove('navbar-hidden');
+    }
+
+    lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+  }, { passive: true });
+}
+
+/* ---------------- Mobile Menu & Backdrop ---------------- */
 function initMobileMenu() {
   const mobileBtn = document.getElementById('mobileMenuBtn');
   const navMenu = document.getElementById('navMenu');
+  const navBackdrop = document.getElementById('navBackdrop');
   const navLinks = document.querySelectorAll('.nav-link');
 
+  const openMenu = () => {
+    if (navMenu) navMenu.classList.add('open');
+    if (navBackdrop) navBackdrop.classList.add('active');
+    if (mobileBtn) mobileBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMenu = () => {
+    if (navMenu) navMenu.classList.remove('open');
+    if (navBackdrop) navBackdrop.classList.remove('active');
+    if (mobileBtn) mobileBtn.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+    document.body.style.overflow = '';
+  };
+
   if (mobileBtn && navMenu) {
-    mobileBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+    mobileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = navMenu.classList.contains('open');
-      mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars-staggered"></i>';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
-    // Close menu when clicking link
+    // Close when clicking outside on backdrop
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeMenu);
+    }
+
+    // Close menu when clicking any nav link
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        if (mobileBtn) {
-          mobileBtn.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
-        }
+        closeMenu();
       });
+    });
+  }
+}
+
+/* ---------------- Smooth Scroll to Top (Circular Floating Button & Logo) ---------------- */
+function initScrollTop() {
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const brandLogo = document.querySelector('.brand-logo');
+
+  // Toggle floating button visibility
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 250) {
+      if (scrollTopBtn) scrollTopBtn.classList.add('visible');
+    } else {
+      if (scrollTopBtn) scrollTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  const scrollToExactTop = (e) => {
+    if (e) e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    // Remove hash without jumping
+    if (window.history.pushState) {
+      window.history.pushState(null, null, window.location.pathname);
+    }
+  };
+
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', scrollToExactTop);
+  }
+
+  if (brandLogo) {
+    brandLogo.addEventListener('click', (e) => {
+      const href = brandLogo.getAttribute('href');
+      if (href === '#hero' || href === '#') {
+        scrollToExactTop(e);
+      }
     });
   }
 }
@@ -67,7 +173,7 @@ function initNavScrollSpy() {
 
   window.addEventListener('scroll', () => {
     let current = '';
-    const scrollPosition = window.pageYOffset + 200;
+    const scrollPosition = window.pageYOffset + 180;
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
@@ -83,7 +189,7 @@ function initNavScrollSpy() {
         link.classList.add('active');
       }
     });
-  });
+  }, { passive: true });
 }
 
 /* ---------------- Certifications Filter ---------------- */
@@ -175,6 +281,15 @@ function initKeyboardListeners() {
     if (e.key === 'Escape') {
       closeImageModal();
       closePdfModal();
+      const navMenu = document.getElementById('navMenu');
+      const navBackdrop = document.getElementById('navBackdrop');
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      if (navMenu && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        if (navBackdrop) navBackdrop.classList.remove('active');
+        if (mobileBtn) mobileBtn.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+        document.body.style.overflow = '';
+      }
     }
   });
 }
