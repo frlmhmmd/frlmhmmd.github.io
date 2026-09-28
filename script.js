@@ -255,7 +255,7 @@ function openPdfModal() {
   const modal = document.getElementById('pdfModal');
   const iframe = document.getElementById('pdfIframe');
   if (modal && iframe) {
-    iframe.src = 'cv/CV_Muhammad_Firly_ATS.pdf#toolbar=1&navpanes=0';
+    iframe.src = 'cv/CV_Muhammad_Firly_ATS-UPDATE.pdf#toolbar=1&navpanes=0';
     modal.classList.add('active');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
